@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CRM.Database", "CRM.Database\CRM.Database.sqlproj", "{6730E7F8-54D6-4D4E-94D8-7ABC8B53637A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.API", "CRM.API\CRM.API.csproj", "{6F1471E0-EBF9-45CE-BD63-AC7B88DBAF9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{6730E7F8-54D6-4D4E-94D8-7ABC8B53637A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6730E7F8-54D6-4D4E-94D8-7ABC8B53637A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6730E7F8-54D6-4D4E-94D8-7ABC8B53637A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6F1471E0-EBF9-45CE-BD63-AC7B88DBAF9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F1471E0-EBF9-45CE-BD63-AC7B88DBAF9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F1471E0-EBF9-45CE-BD63-AC7B88DBAF9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F1471E0-EBF9-45CE-BD63-AC7B88DBAF9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
