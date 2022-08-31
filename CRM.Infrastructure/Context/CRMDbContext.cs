@@ -19,20 +19,11 @@ namespace CRM.Infrastructure.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Customer>()
-                .HasKey(c => c.CustomerId);
+                .HasMany(c => c.Invoices)
+                .WithOne();
 
             modelBuilder.Entity<Invoice>()
-                .HasOne(a => a.Customer)
-                .WithMany()
-                .HasForeignKey(a => a.CustomerId);
-
-            modelBuilder.Entity<Invoice>()
-                .HasOne<Domain.Models.File>()
-                .WithOne()
-                .HasForeignKey<Invoice>(a => a.FileId);
-
-            modelBuilder.Entity<Domain.Models.File>()
-                .HasKey(f => f.FileId);
+                .HasOne<Domain.Models.File>();
         }
     }
 }

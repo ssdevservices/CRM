@@ -1,6 +1,7 @@
 ﻿using CRM.Domain.Repository;
 using CRM.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace CRM.Infrastructure.Repository
 {
@@ -28,6 +29,15 @@ namespace CRM.Infrastructure.Repository
         public IEnumerable<TEntity> GetAll()
         {
             return DbSet.ToList();
+        }
+
+        public IEnumerable<TEntity> GetAll(params Expression<Func<TEntity, object>>[] properties)
+        {
+            var query = DbSet as IQueryable<TEntity>;
+
+            query = properties.Aggregate(query, (current, property) => current.Include(property));
+
+            return query.AsNoTracking().AsEnumerable();
         }
 
         public TEntity GetById(int Id)
